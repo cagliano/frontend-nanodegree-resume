@@ -176,7 +176,7 @@ DisplayWork();
 $("#main").append(internationalizeButton)
 
 function inName(dadividere){
-diviso= dadividere.split(" ")
+var diviso= dadividere.split(" ");
 console.log(diviso);
 nome=diviso[0];
 cognome=diviso[1];
