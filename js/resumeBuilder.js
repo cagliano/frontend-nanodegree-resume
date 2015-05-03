@@ -11,8 +11,8 @@ var bio = {
 "Cognome": "Panzeri",
 "Età":45,
 "Ruolo":"apprendista imprenditore",
-"Informazioni di Contatto": {
-	"paese":"Santa Maria Hoè", 
+"contacts": {
+	"location":"Santa Maria Hoè", 
 	"via": "corsia Mercato 20",
 	"mobile":"335 5491651",
 	"email":"paolo.panzeri@gmail.com",
@@ -32,7 +32,7 @@ bio.Foto = "<img src='"+bio.Foto+"'>"
 //};
 
 var work = {
-	"job":[{
+	"jobs":[{
 	"employer":"Collead Srl",
 	"title": "Ceo",
 	"location":"Barzanò",
@@ -51,7 +51,26 @@ var work = {
 	"dates":"2003 - 2008",
 	"description": "il mio primo lavoro, non si scorda mai"
 
-}]}
+// },{
+// "employer":"Buongiorno Spa",
+// 	"title": "Di tutto",
+// 	"location":"Los Gatos",
+// 	"dates":"2008 - 2009",
+// 	"description": "Una esperienza in California..per certi versi mi manca"
+// },{
+// "employer":"Buongiorno Spa",
+// 	"title": "Di tutto",
+// 	"location":"San Paolo",
+// 	"dates":"2009 - 2009",
+// 	"description": "Alcuni mesi come Country Manager supplente"
+}
+
+
+
+
+
+
+]}
 
 
 
@@ -189,6 +208,8 @@ cognome= cognome.toUpperCase();
 return nome+" "+cognome
 };
 
+
+
 projects.display=function(){
 
 $("#projects").append(HTMLprojectStart);
@@ -202,8 +223,9 @@ $(".project-entry:last").append(HTMLprojectImage.replace("%data%",projects.proje
 
 
 }
+$("#mapDiv").append(googleMap);
+
 
 };
-
 
 projects.display();
